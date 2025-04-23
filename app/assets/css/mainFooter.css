@@ -1,0 +1,25 @@
+.img_kks_cc{
+  display:inline-block;
+  height: 150px;
+  width: 150px;
+    background: url('/img/kks_cc_ys.png')  no-repeat;
+    background-size: 150px 150px;
+}
+
+body {
+    margin: 0;
+  
+  }
+
+
+.footer-container{
+  text-align: left;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  background-color:#9bcad5;
+  font-size: 20px;
+  /* line-height: 1.8; */
+  font-weight: 600;
+  color: #ffffff; 
+  min-height: 80px;
+  
+}

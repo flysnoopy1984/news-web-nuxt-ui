@@ -1,0 +1,69 @@
+#header-container{
+	
+	
+	width:100%;
+	height: 80px;
+	position: relative;
+}
+#header-compact-v3{
+	z-index: 110;
+	font-size: 12px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background: var(--white);
+	color: var(--grayBlack);
+	height: 100%;
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.logoWrapper{
+	margin-left: 50px;
+	display: flex;
+	align-items: center;
+	height: 100%
+}
+
+.logoWrapper .web-logo{
+	
+    display:inline-block;
+    height: 50px;
+    width: 50px;
+    background: url('/img/kksLogo.png')  no-repeat;
+    background-size: 50px 50px;
+}
+.logo-text{
+	font-family: 'aliHealth';
+	margin-left: 10px;margin-right: 10px;
+	font-size: 22px;
+	height: 22px;
+	color: #4441A9;
+
+}
+.web-des{
+	font-family: 'bxz';
+	letter-spacing: 2px;
+	font-size: 14px;
+	margin-left: 10px;margin-right: 10px;
+	color: #61a9b9;
+	padding-top: 6px;
+}
+@font-face{
+	font-family: 'aliHealth';
+	/* src:url("../fonts/aliHealth-kakasong.ttf"); */
+	src:url("../fonts/kks-aliHealth.ttf");
+}
+
+@font-face{
+	font-family: 'bxz';
+	src:url("../fonts/kks-biaoxiaozhi.ttf");
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+}

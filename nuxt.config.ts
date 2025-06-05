@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
+  app: {
+    head: {
+      meta: [
+        { name: 'p:domain_verify', content: '2012aca8232b82b17619e74facf7aaee' }
+      ]
+    }
+  },
 
   devtools: { enabled: true },
 
@@ -30,5 +37,15 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
-  compatibilityDate: '2024-11-27'
+  compatibilityDate: '2024-11-27',
+  
+  nitro: {
+    routeRules: {
+      '/webview': {
+        headers: {
+          'Content-Security-Policy': "upgrade-insecure-requests;",
+        }
+      }
+    }
+  }
 })

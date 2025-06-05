@@ -77,9 +77,10 @@ const filteredNewsList = computed(() => {
   return newsList.value.filter(item => item && item.sourceId && selectedTags.value.includes(item.sourceId))
 })
 
-// 打开新闻链接
+// 不直接打开新闻链接，url套一层kakasong域名的，为了小程序使用,跳不了。。。
 const openNews = (url: string) => {
   if (url) {
+    // const miniUrl = "https://www.kakasong.cn/webview?url="+url;
     window.open(url, '_blank')
   }
 }

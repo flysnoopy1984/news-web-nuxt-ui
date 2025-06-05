@@ -22,7 +22,9 @@ useHead({
    title: '呀哈哈，福到了',
    meta:[
       { name: 'description', content: '祝福 海报 节日 贺卡' },
-      { name: 'charset', content: 'utf-8' }
+      { name: 'charset', content: 'utf-8' },
+   
+   
 
    ],
 })

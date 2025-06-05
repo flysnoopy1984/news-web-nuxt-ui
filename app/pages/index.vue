@@ -21,8 +21,13 @@
   </div>
 </template>
 <script setup lang="ts">
+useHead({
+   meta:[
+     { 
+      name: 'p:domain_verify', 
+      content: '2012aca8232b82b17619e74facf7aaee' 
+    }
 
-</script>
-<script setup lang="ts">
-
+   ],
+})
 </script>

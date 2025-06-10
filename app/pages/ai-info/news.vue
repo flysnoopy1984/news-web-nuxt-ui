@@ -59,7 +59,7 @@
      </div>
 </template>
 <script lang="ts" setup>
-import type { PushNewsLatest } from '~/types/news';
+import type { PushNewsLatest, QNewsInfos } from '~/types/news';
 
 // import '~/assets/css/ai-info/news.css'
 const selectedTags = useState<string[]>('news-selected-tags', () => []);
@@ -68,7 +68,15 @@ const sourceList = sources.value.sourceList
 
 const getColorById =  (id: string) => sourceList.find(s => s.id === id)?.color || '#666666'
 
-const { data: newsList, status,error } = useKksFetch<PushNewsLatest[]>('/aiInfo/push/news', {method: 'POST'})
+// 准备API请求参数
+const requestParams: QNewsInfos = {
+  sourceList: [], // 可以根据需要传递特定的来源列表
+}
+
+const { data: newsList, status,error } = useKksFetch<PushNewsLatest[]>('/aiInfo/query/pushNews', {
+  method: 'POST',
+  body: requestParams
+})
 
 //根据下拉框的内容过滤
 const filteredNewsList = computed(() => {
